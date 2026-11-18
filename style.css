@@ -1,0 +1,53 @@
+/* Vehicle Record System - custom styles on top of Bootstrap 5 */
+:root {
+    --ink: #1c2430;
+    --asphalt: #232b36;
+    --plate-yellow: #f6c90e;
+    --brand: #0e6b5c;
+    --brand-dark: #0a5247;
+    --paper: #f4f5f2;
+}
+body {
+    font-family: 'Barlow', system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+}
+h1, h2, h3, .navbar-brand { font-family: 'Barlow Condensed', 'Barlow', sans-serif; letter-spacing: .02em; }
+.app-nav { background: var(--asphalt); border-bottom: 4px solid var(--plate-yellow); }
+.app-nav .navbar-brand { font-size: 1.5rem; font-weight: 700; }
+.app-nav .nav-link.active { color: var(--plate-yellow); }
+.app-footer { color: #6b7480; }
+
+.btn-brand { background: var(--brand); border-color: var(--brand); color: #fff; }
+.btn-brand:hover, .btn-brand:focus { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; }
+
+/* The memorable element: plate-style badge */
+.plate {
+    display: inline-block;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: .08em;
+    padding: .1rem .65rem;
+    background: var(--plate-yellow);
+    color: #111;
+    border: 2px solid #111;
+    border-radius: .35rem;
+    white-space: nowrap;
+}
+.plate-lg { font-size: 2rem; padding: .15rem 1.1rem; border-width: 3px; border-radius: .5rem; }
+
+.stat { background: #fff; border: 1px solid #dfe2dc; border-left: 5px solid var(--brand); border-radius: .5rem; padding: .85rem 1rem; }
+.stat .num { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+.stat.warn { border-left-color: #e0a800; }
+.stat.bad  { border-left-color: #c0392b; }
+.stat.gray { border-left-color: #7b8590; }
+
+.panel { background: #fff; border: 1px solid #dfe2dc; border-radius: .5rem; }
+.table > :not(caption) > * > * { padding: .75rem .85rem; vertical-align: middle; }
+.table thead th { background: #eef0ec; font-weight: 600; white-space: nowrap; }
+.form-section { font-weight: 600; padding-bottom: .4rem; margin-bottom: 1rem; border-bottom: 2px solid var(--plate-yellow); display: inline-block; }
+.detail-label { color: #6b7480; font-size: .85rem; }
+.page-link { color: var(--brand); }
+.page-item.active .page-link { background: var(--brand); border-color: var(--brand); }
+:focus-visible { outline: 3px solid var(--plate-yellow); outline-offset: 2px; }
